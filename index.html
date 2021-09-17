@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Code Quiz</title>
+    <title>Coding Quiz</title>
 </head>
 <body>
+    <!-- Header Containing Button to View High Scores and Count Down Timer of Quiz -->
     <header>
+        <div>
+            <button class="highScoresbtn" id="viewScores">View High Scores</button>
+        </div>
+        <div>
+            <p>Time: <span id="timer"></span></p>
+        </div>
     </header>
+
+        <div id="parent">
+
+            <div id="quizDisplay">
+                <p id="questionDisplay"></p>
+                <p id="scoreDisplay"></p>
+                <p id="initialsContent"></p>
+                <textarea id="initialsInput"></textarea>
+                <button class="quizButtons" id="quizStart">Start Quiz</button>
+
+                <!-- Buttons for selecting Answers -->
+                <button class="quizButtons" id="choice1"></button>
+                <button class="quizButtons" id="choice2"></button>
+                <button class="quizButtons" id="choice3"></button>
+                <button class="quizButtons" id="choice4"></button>
+                
+                <button class="quizButtons" id="saveScore">Save Score</button>
+            </div>
+
+            <div id="answerDisplayParent">
+                <p id="answerDisplay"></p>
+            </div>
+
+
+        </div>
+
+
 
 
 
