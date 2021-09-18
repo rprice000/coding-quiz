@@ -13,6 +13,9 @@ var finalChoice = 0;
 var timeKeeper = 1;
 // Variable for initial start time
 var startTime = 75;
+// Variable to display count down time
+var quizCountDownTime = document.getElementById('timer');
+
 // Creates Button to View Scores
 var viewScoresBtnEl = document.getElementById('viewScores');
 // Creates Button  to Start Quiz
@@ -29,8 +32,7 @@ var choice4BtnEl = document.getElementById('choice4');
 var saveScoreEl = document.getElementById('saveScore');
 // Variable creates container for quiz
 var parentEl = document.getElementById('parent');
-// Variable to display count down time
-var quizCountDownTime = document.getElementById('timer');
+
 // Variable to see if user picks right or wrong answer
 var answerDisplay = document.getElementById('answerDisplay');
 // Variable to display questions
@@ -92,6 +94,9 @@ var choiceList = {
     }
 };
 
+
+// Sets initial time for the quiz
+quizCountDownTime.textContent = startTime;
 
 
 
