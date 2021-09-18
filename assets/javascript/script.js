@@ -14,21 +14,21 @@ var timeKeeper = 1;
 // Variable for initial start time
 var startTime = 75;
 // Creates Button to View Scores
-var viewScoresBtn = document.getElementById('viewScores');
+var viewScoresBtnEl = document.getElementById('viewScores');
 // Creates Button  to Start Quiz
-var quizStartBtn = document.getElementById('quizStart');
+var quizStartBtnEl = document.getElementById('quizStart');
 // Creates button for choice 1
-var choice1Btn = document.getElementById('choice1'); 
+var choice1BtnEl = document.getElementById('choice1'); 
 // Creates button for choice 2
-var choice2Btn = document.getElementById('choice2'); 
+var choice2BtnEl = document.getElementById('choice2'); 
 // Creates button for choice 3
-var choice3Btn = document.getElementById('choice3'); 
+var choice3BtnEl = document.getElementById('choice3'); 
 // Creates button for choice 4
-var choice4Btn = document.getElementById('choice4');
+var choice4BtnEl = document.getElementById('choice4');
 // Creates button for saving score
-var saveScore = document.getElementById('saveScore');
+var saveScoreEl = document.getElementById('saveScore');
 // Variable creates container for quiz
-var parent = document.getElementById('parent');
+var parentEl = document.getElementById('parent');
 // Variable to display count down time
 var quizCountDownTime = document.getElementById('timer');
 // Variable to see if user picks right or wrong answer
@@ -44,11 +44,11 @@ var initialsInputEl = document.createElement("initialsInput");
 
 
 // Initial Display of Quiz Content
-choice1Btn.style.display = 'none';
-choice2Btn.style.display = 'none';
-choice3Btn.style.display = 'none';
-choice4Btn.style.display = 'none';
-saveScore.style.display = 'none';
+choice1BtnEl.style.display = 'none';
+choice2BtnEl.style.display = 'none';
+choice3BtnEl.style.display = 'none';
+choice4BtnEl.style.display = 'none';
+saveScoreEl.style.display = 'none';
 answerDisplay.style.display='none';
 initialsInput.style.display='none';
 
