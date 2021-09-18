@@ -181,6 +181,32 @@ function logScores (event) {
     logScores();
 }
 
+var i = 0;
+
+function displayScores() {
+
+    quizPromptEl.style.display = "none";
+    timer.style.display = "none";
+    questionsHolder.style.display = "none";
+    timesUp.style.display = "none";
+    userFinalScoreData.style.display = "none";
+    highScores.style.display = "block";
+
+    var savedScoreData = localStorage.getItem("High Scores");
+    
+    if (savedScoreData === null) {
+        return;
+    }
+
+    var storedUserData = JSON.parse(savedScoreData);
+
+    for (; i < storedUserData.length; i++) {
+        var newScores = document.createElement("p");
+        newScores.innerHTML = storedUserData[i].initials + ": " + storedUserData[i].score;
+        scoresList.appendChild(newScores);
+    }
+}
+
          
 
 
