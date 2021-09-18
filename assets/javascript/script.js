@@ -176,7 +176,7 @@ function logScores (event) {
     savedScoresArray.push(savedScore);
 
     var scoresString = JSON.stringify(savedScoresArray);
-    window.locatalStorage.setItem("High Scores", scoresString);
+    window.localStorage.setItem("High Scores", scoresString);
 
     logScores();
 }
