@@ -214,11 +214,23 @@ choice2.addEventListener("click", selection2);
 choice3.addEventListener("click", selection3);
 choice4.addEventListener("click", selection4);
 
+submitScore.addEventListener("click", function(event) {
+    logScores(event);
+});
 
+viewHighScore.addEventListener("click", function(event) {
+    displayScores(event);
+})
 
+goBack.addEventListener("click", function () {
+    quizPromptEl.style.display = "block";
+    highScores.style.display = "none";
+});
 
-
-
+clearScores.addEventListener("click", function () {
+    window.localStorage.removeItem("High Scores");
+    scoresList.innerHTML = "High Scores have been reset.";
+});
 
 
 
