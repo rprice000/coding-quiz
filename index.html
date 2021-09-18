@@ -7,28 +7,28 @@
     <title>Coding Quiz</title>
 </head>
 <body>
- <div class="parentDiv">
+ <div class="parent">
     <div><a href="#" id="viewHighScore">View High Scores</a></div>
     <div id="timer">Time: <span id="timeCountDown">0</span></div>
     <div id="timesUp">Time's Up!</div>
 
-    <div id="childDiv">
+    <div id="child">
 
-      <div id="start">
+      <div id="quizPrompt">
         <h1>Coding Quiz Challenge</h1>
         <p>Try to answer the following code-related questions within the time limit.  Keep in mind the incorrect answers will penalize your score/time by ten seconds!</p>
-        <button type="button" id="start-quiz-button">Start Quiz</button>
+        <button type="button" id="startButton">Start Quiz</button>
       </div>
 
     <!--quiz div  -->
-    <div id="questionsDiv">
+    <div id="questionsHolder">
       <p id="questionPrompt"></p>
         <div>
           <p><button id="choice0"></button></p>
           <p><button id="choice1"></button></p>
           <p><button id="choice2"></button></p>
           <p><button id="choice3"></button></p>
-          <!-- <hr id="lineBreak" style="display: none" class="mt-4"> -->
+          <hr id="lineBreak">
           <p id="showIfCorrect"></p>
         </div>
     </div>
@@ -39,8 +39,8 @@
       <div>
         <h2>Your final score is <span id="finalScore"></span> !</h2>
           <form>
-            <p>Enter your initials: <input id="initialsInput" type="text">
-            <button type="submit" id="submitInitialBtn">Submit Score</button>
+            <p>Enter your initials: <input id="initialsData" type="text">
+            <button type="submit" id="submitScore">Submit Score</button>
             </p>
           </form>
       </div>

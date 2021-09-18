@@ -27,6 +27,38 @@ var questionsList = [
   }
 ]
 
+var timer = document.getElementById("timer");
+var timeCountDown = document.getElementById("timeCountDown");
+var timesUp = document.getElementById("timesUp");
+
+var quizPromptEl = document.getElementById("quizPrompt");
+var startQuizButton = document.getElementById("startButton");
+
+var questionsHolder = document.getElementById("questionsHolder");
+var questionPrompt = document.getElementById("questionPrompt");
+var choice1 = document.getElementById("choice0");
+var choice2 = document.getElementById("choice1");
+var choice3 = document.getElementById("choice2");
+var choice4 = document.getElementById("choice3");
+var showIfCorrect = document.getElementById("showIfCorrect");
+
+var userFinalScoreData = document.getElementById("userFinalScoreData");
+var submitScore = document.getElementById("submitScore");
+var initialData = document.getElementById("initialData");
+var everything = document.getElementById("everything");
+
+var highScores = document.getElementById("highScores");
+var finalScore = document.getElementById("finalScore");
+
+var goBack = document.getElementById("goBack");
+var clearScores = document.getElementById("clearScores");
+var viewHighScore = document.getElementById("viewHighScore");
+var scoresList = document.getElementById("scoresList");
+
+
+
+
+
 
          
 
