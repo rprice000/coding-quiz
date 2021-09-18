@@ -7,12 +7,19 @@
     <title>Coding Quiz</title>
 </head>
 <body>
- <div class="parent">
+<!-- main-div starts -->
+ <div class="main-div">
+
+<!-- secondary-div starts -->
+   <div class="secondary-div">
     <div><a href="#" id="viewHighScore">View High Scores</a></div>
     <div id="timer">Time: <span id="timeCountDown">0</span></div>
     <div id="timesUp">Time's Up!</div>
+  </div>
+<!-- secondary-div ends -->
 
-    <div id="child">
+<!-- secondary-div starts -->
+    <div class="secondary-div">
 
       <div id="quizPrompt">
         <h1>Coding Quiz Challenge</h1>
@@ -20,7 +27,7 @@
         <button type="button" id="startButton">Start Quiz</button>
       </div>
 
-    <!--quiz div  -->
+    <!--Div that holds Questions and Answer Choices Starts  -->
     <div id="questionsHolder">
       <p id="questionPrompt"></p>
         <div>
@@ -32,10 +39,10 @@
           <p id="showIfCorrect"></p>
         </div>
     </div>
+<!--Div that holds Questions and Answer Choices Ends  -->
 
-    <!-- score div -->
+<!-- Div that holds User Input Data Starts -->
     <div id="userFinalScoreData">
-      
       <div>
         <h2>Your final score is <span id="finalScore"></span> !</h2>
           <form>
@@ -44,28 +51,25 @@
             </p>
           </form>
       </div>
-
     </div>
+<!-- Div that holds User Input Data Ends -->
 
-    <!-- highscores section -->
+<!-- Div that holds High Score List Starts -->
     <div id="highScores">
-        <h2>High Scores</h2>                   
+        <h2>High Scores</h2> 
+        <!-- Div that will be appended to list out High Scores-->                  
             <div id="scoresList"></div>
-
-                <!-- append each highscore as new paragraph here -->
                 <p>
                     <button type="submit" id="goBack">Go Back</button>
                     <button type="submit" id="clearScores">Clear High Scores</button>
-                </p>
-                
+                </p>  
      </div>
+<!-- Div that holds High Score List Ends-->
 
-
-</div> <!-- child ending div -->
-</div> <!--parent ending div -->
-
-
-
+</div>
+<!-- secondary-div ends --> 
+</div>
+<!--main-div ends -->
 
 
 <script src="./assets/javascript/script.js"></script>
