@@ -1,59 +1,4 @@
 
-// Variable fow which questin to display
-var quizQuestion = 0;
-// Variable for which answers to display
-var quizAnswerChoices = 0;
-// Variable for keeping score during quiz
-var score = 0;
-// Variable for storing score after quiz
-var finalScore = 50;
-// Variable for 
-var finalChoice = 0;
-// Variable for storing time if time runs out
-var timeKeeper = 1;
-// Variable for initial start time
-var startTime = 75;
-// Variable to display count down time
-var quizCountDownTime = document.getElementById('timer');
-
-// Creates Button to View Scores
-var viewScoresBtnEl = document.getElementById('viewScores');
-// Creates Button  to Start Quiz
-var quizStartBtnEl = document.getElementById('quizStart');
-// Creates button for choice 1
-var choice1BtnEl = document.getElementById('choice1'); 
-// Creates button for choice 2
-var choice2BtnEl = document.getElementById('choice2'); 
-// Creates button for choice 3
-var choice3BtnEl = document.getElementById('choice3'); 
-// Creates button for choice 4
-var choice4BtnEl = document.getElementById('choice4');
-// Creates button for saving score
-var saveScoreEl = document.getElementById('saveScore');
-// Variable creates container for quiz
-var parentEl = document.getElementById('parent');
-
-// Variable to see if user picks right or wrong answer
-var answerDisplay = document.getElementById('answerDisplay');
-// Variable to display questions
-var questionPromptEl = document.createElement("questionPrompt");
-// Variable for showing if answered right or wrong
-var scoreDisplayEl = document.createElement("scoreDisplay");
-// Variable for showing user initials
-var initialsContentEl = document.createElement("initialsContent");
-// Variable for input to place user initials
-var initialsInputEl = document.createElement("initialsInput");
-
-
-// Initial Display of Quiz Content
-choice1BtnEl.style.display = 'none';
-choice2BtnEl.style.display = 'none';
-choice3BtnEl.style.display = 'none';
-choice4BtnEl.style.display = 'none';
-saveScoreEl.style.display = 'none';
-answerDisplay.style.display='none';
-initialsInput.style.display='none';
-
 var questionsList = {
     eachQuestion: { 
         0 : "Commonly used datatypes DO NOT include?",
@@ -93,13 +38,6 @@ var choiceList = {
             3: "console.log"},  
     }
 };
-
-
-// Sets initial time for the quiz
-quizCountDownTime.textContent = startTime;
-
-
-
 
 
 
