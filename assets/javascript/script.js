@@ -208,7 +208,7 @@ function displayScores() {
 }
 
          
-
+startQuizButton.addEventListener("click", preparingQuiz);
 
 
 
