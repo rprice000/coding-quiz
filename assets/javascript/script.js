@@ -118,19 +118,19 @@ function seeAnswer(answer) {
 
 }
 
-function selectionA() 
+function selection1() 
 {
     seeAnswer(0);
 }
-function selectionB() 
+function selection2() 
 {
     seeAnswer(1);
 }
-function selectionC() 
+function selection3() 
 {
     seeAnswer(2);
 }
-function selectionD() 
+function selection4() 
 {
     seeAnswer(3);
 }
@@ -209,6 +209,11 @@ function displayScores() {
 
          
 startQuizButton.addEventListener("click", preparingQuiz);
+choice1.addEventListener("click", selection1);
+choice2.addEventListener("click", selection2);
+choice3.addEventListener("click", selection3);
+choice4.addEventListener("click", selection4);
+
 
 
 
