@@ -22,7 +22,7 @@ var questionsList = [
   },
   {
     question:  "A very useful tool used during development and debugging for printing content to the debugger is:",
-    choices:  ["1. Javascript", "2. terminal/bash", "3. for loops", "4. console.log",],
+    choices:  ["1. Javascript", "2. terminal/bash", "3. for loops", "4. console.log"],
     answer:  "4. console.log"
   }
 ]
@@ -56,6 +56,8 @@ var viewHighScore = document.getElementById("viewHighScore");
 var scoresList = document.getElementById("scoresList");
 
 var correctChoices = 0;
+var questionNumber = 0;
+var timeRemaining = 75;
 
 function preparingQuiz() {
     questionNumber = 0
@@ -82,9 +84,92 @@ function preparingQuiz() {
     showQuestions();
 };
 
+function showQuestions() {
+    nextQuestion();
+}
 
+function nextQuestion() {
+    questionPrompt.textContent = questionsList[questionNumber].question;
+    choice1.textContent = questionsList[questionNumber].choices[0];
+    choice2.textContent = questionsList[questionNumber].choices[1];
+    choice3.textContent = questionsList[questionNumber].choices[2];
+    choice4.textContent = questionsList[questionNumber].choices[3];
+}
 
+function seeAnswer(answer) {
+    var dividingLine = document.getElementById("dividingLine");
+    dividingLine.style.display = "block";
+    showIfCorrect.style.display = "block";
 
+    if(questionsList[questionNumber].answer === questionsList[questionNumber].choices[answer]) {
+        correctChoices++;
+        showIfCorrect.textContent = "Correct";
+    } else {
+        timeRemaining -= 10;
+        timeCountDown.textContent = timeRemaining;
+        showIfCorrect.textContent = "Incorrect! The answer is: " + questionsList[questionNumber].answer;
+    }
+    questionNumber++;
+    if (questionNumber < questionsList.length) {
+        nextQuestion();
+    } else {
+        quizOver();
+    }
+
+}
+
+function selectionA() 
+{
+    seeAnswer(0);
+}
+function selectionB() 
+{
+    seeAnswer(1);
+}
+function selectionC() 
+{
+    seeAnswer(2);
+}
+function selectionD() 
+{
+    seeAnswer(3);
+}
+
+function quizOver() {
+    userFinalScoreData.style.display = "block";
+    questionsHolder.style.display = "none";
+    quizPromptEl.style.display = "none";
+    timer.style.display = "none";
+    timesUp.style.display = "block";
+
+    finalScore.textContent = correctChoices;
+}
+
+function logScores (event) {
+    event.preventDefault();
+
+    if(initialData.value === "") {
+        window.alert("Please enter your initials.");
+        return;
+    }
+
+    quizPromptEl.style.display = "none";
+    timer.style.display = "none";
+    timesUp.style.display = "none";
+    userFinalScoreData.style.display = "none";
+    highScores.style.display = "block";
+
+    var savedScoreData = localStorage.getItem("High Scores");
+    var savedScoresArray;
+
+    if (savedScoreData === null) {
+        savedScoresArray = [];
+    } else {
+        savedScoresArray = JSON.parse(savedScoreData)
+    }
+
+    var 
+}
 
          
 
