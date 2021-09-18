@@ -168,7 +168,17 @@ function logScores (event) {
         savedScoresArray = JSON.parse(savedScoreData)
     }
 
-    var 
+    var savedScore = {
+        initials: initialData.value,
+        score: finalScore.textContent
+    };
+
+    savedScoresArray.push(savedScore);
+
+    var scoresString = JSON.stringify(savedScoresArray);
+    window.locatalStorage.setItem("High Scores", scoresString);
+
+    logScores();
 }
 
          
