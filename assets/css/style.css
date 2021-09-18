@@ -7,3 +7,23 @@
 #timesUp {
   display: none;
 }
+
+#questionsHolder {
+  display: none;
+}
+
+#dividingLine {
+  display: none;
+}
+
+#showIfCorrect {
+  display: none;
+}
+
+#userFinalScoreData {
+  display: none;
+}
+
+#highScores {
+  display: none;
+}

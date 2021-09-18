@@ -44,7 +44,7 @@ var showIfCorrect = document.getElementById("showIfCorrect");
 
 var userFinalScoreData = document.getElementById("userFinalScoreData");
 var submitScore = document.getElementById("submitScore");
-var initialData = document.getElementById("initialData");
+var initialsData = document.getElementById("initialsData");
 var everything = document.getElementById("everything");
 
 var highScores = document.getElementById("highScores");
@@ -60,10 +60,10 @@ var questionNumber = 0;
 var timeRemaining = 75;
 
 function preparingQuiz() {
-    questionNumber = 0
+    questionNumber = 0;
     totalTime = 75;
     timeCountDown.textContent = timeRemaining;
-    initialData.textContent = "";
+    initialsData.textContent = "";
     
     quizPromptEl.style.display = "none";
     questionsHolder.style.display = "block";
@@ -148,7 +148,7 @@ function quizOver() {
 function logScores (event) {
     event.preventDefault();
 
-    if(initialData.value === "") {
+    if(initialsData.value === "") {
         window.alert("Please enter your initials.");
         return;
     }
@@ -169,7 +169,7 @@ function logScores (event) {
     }
 
     var savedScore = {
-        initials: initialData.value,
+        initials: initialsData.value,
         score: finalScore.textContent
     };
 
