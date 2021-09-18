@@ -145,7 +145,7 @@ function quizOver() {
     finalScore.textContent = correctChoices;
 }
 
-function logScores (event) {
+function logScores(event) {
     event.preventDefault();
 
     if(initialsData.value === "") {
@@ -178,8 +178,9 @@ function logScores (event) {
     var scoresString = JSON.stringify(savedScoresArray);
     window.localStorage.setItem("High Scores", scoresString);
 
-    logScores();
-}
+    displayScores();
+   
+};
 
 var i = 0;
 
