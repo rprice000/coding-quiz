@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto Mono', monospace;
+  background-color:rgb(97, 102, 102);
+  color: white
 }
 
 .secondary-div {
@@ -29,6 +31,15 @@ button {
   padding: 10px;
   width: 200px;
   text-align: center;
+  opacity: 0.5;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+button:hover {
+  opacity: 1;
 }
 
 #questionPrompt {
@@ -38,4 +49,24 @@ button {
 
 #quizDirections {
   padding-top: 10px;
+}
+
+#viewHighScore {
+  text-decoration: none;
+  border: 2px solid black;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+#initialsData {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
 }
