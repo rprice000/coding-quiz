@@ -57,38 +57,6 @@ var scoresList = document.getElementById("scoresList");
 
 var correctChoices = 0;
 
-function preparingQuiz() {
-    questionNumber = 0
-    totalTime = 75;
-    timeCountDown.textContent = timeRemaining;
-    initialData.textContent = "";
-    
-    quizPromptEl.style.display = "none";
-    questionsHolder.style.display = "block";
-    timer.style.display = "block";
-    timesUp.style.display = "none";
-
-    var startCountDown = setInterval(function () {
-        timeRemaining--;
-        timeCountDown.textContent = timeRemaining;
-        if(timeRemaining <= 0) {
-            clearInterval(startCountDown);
-            if (questionNumber < questionsList.length - 1) {
-                quizOver();
-            }
-        }
-    }, 1000);
-
-    showQuestions();
-};
-
-function showQuestions() {
-    nextQuestion();
-}
-
-function nextQuestion() {
-    
-}
 
 
 
