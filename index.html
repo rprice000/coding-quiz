@@ -7,19 +7,62 @@
     <title>Coding Quiz</title>
 </head>
 <body>
-    <!-- Header Containing Button to View High Scores and Count Down Timer of Quiz -->
-    <header>
-        <div>
-            <button class="highScoresbtn" id="viewScores">Click Me to View High Scores!</button>
-        </div>
-        <div>
-            <p>Time: <span id="timer"></span></p>
-        </div>
-    </header>
+ <div class="parentDiv">
+    <div><a href="#" id="viewHighScore">View High Scores</a></div>
+    <div id="timer">Time: <span id="timeCountDown">0</span></div>
+    <div id="timesUp">Time's Up!</div>
 
-        <div>
+    <div id="childDiv">
 
+      <div id="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.  Keep in mind the incorrect answers will penalize your score/time by ten seconds!</p>
+        <button type="button" id="start-quiz-button">Start Quiz</button>
+      </div>
+
+    <!--quiz div  -->
+    <div id="questionsDiv">
+      <p id="questionPrompt"></p>
+        <div>
+          <p><button id="btn0" class="btn btn-dark"></button></p>
+          <p><button id="btn1" class="btn btn-dark"></button></p>
+          <p><button id="btn2" class="btn btn-dark"></button></p>
+          <p><button id="btn3" class="btn btn-dark"></button></p>
+          <!-- <hr id="lineBreak" style="display: none" class="mt-4"> -->
+          <p id="showIfCorrect"></p>
         </div>
+    </div>
+
+    <!-- score div -->
+    <div id="userFinalScoreData">
+      
+      <div>
+        <h2>Your final score is <span id="finalScore"></span> !</h2>
+          <form>
+            <p>Enter your initials: <input id="initialsInput" type="text">
+            <button type="submit" id="submitInitialBtn">Submit Score</button>
+            </p>
+          </form>
+      </div>
+
+    </div>
+
+    <!-- highscores section -->
+    <div id="highScores">
+        <h2>High Scores</h2>                   
+            <div id="scoresList"></div>
+
+                <!-- append each highscore as new paragraph here -->
+                <p>
+                    <button type="submit" id="goBack">Go Back</button>
+                    <button type="submit" id="clearScores">Clear High Scores</button>
+                </p>
+                
+     </div>
+
+
+</div> <!-- child ending div -->
+</div> <!--parent ending div -->
 
 
 
