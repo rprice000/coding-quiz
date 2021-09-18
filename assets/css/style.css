@@ -2,28 +2,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
 }
 
-#timesUp {
+.secondary-div {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+#timesUp, 
+#questionsHolder, 
+#dividingLine, 
+#showIfCorrect, 
+#userFinalScoreData, 
+#highScores   {
   display: none;
 }
 
-#questionsHolder {
-  display: none;
+#QuizContentArea {
+ text-align: center;
 }
 
-#dividingLine {
-  display: none;
+button {
+  margin: 20px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
 }
 
-#showIfCorrect {
-  display: none;
+#questionPrompt {
+  font-weight: bold;
+  font-size: x-large;
 }
 
-#userFinalScoreData {
-  display: none;
-}
-
-#highScores {
-  display: none;
+#quizDirections {
+  padding-top: 10px;
 }

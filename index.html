@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Coding Quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 <!-- main-div starts -->
  <div class="main-div">
 
 <!-- secondary-div starts -->
-   <div class="secondary-div">
+   <div class="secondary-div" id="Scores-Time">
     <div><a href="#" id="viewHighScore">View High Scores</a></div>
     <div id="timer">Time: <span id="timeCountDown">0</span></div>
     <div id="timesUp">Time's Up!</div>
@@ -19,11 +23,11 @@
 <!-- secondary-div ends -->
 
 <!-- secondary-div starts -->
-    <div class="secondary-div">
+    <div class="secondary-div" id="QuizContentArea">
 
       <div id="quizPrompt">
         <h1>Coding Quiz Challenge</h1>
-        <p>Try to answer the following code-related questions within the time limit.  Keep in mind the incorrect answers will penalize your score/time by ten seconds!</p>
+        <p id="quizDirections">Try to answer the following code-related questions within the time limit.  Keep in mind the incorrect answers will penalize your score/time by ten seconds!</p>
         <button type="button" id="startButton">Start Quiz</button>
       </div>
 
@@ -35,7 +39,6 @@
           <p><button id="choice1"></button></p>
           <p><button id="choice2"></button></p>
           <p><button id="choice3"></button></p>
-          <hr id="dividingLine">
           <p id="showIfCorrect"></p>
         </div>
     </div>
