@@ -17,10 +17,10 @@ This web application was created to help user take a coding quiz.  The user will
 # Links
 
 - GitHub Repository Link
-https://github.com/rprice000/password-generator
+https://github.com/rprice000/coding-quiz
 
 - Website Link
-https://rprice000.github.io/password-generator/
+https://rprice000.github.io/coding-quiz/
 
 # Version
 
