@@ -14,6 +14,11 @@ This web application was created to help user take a coding quiz.  The user will
 - This code can be used and opened on any web browser.
 - To veiw  Page open the index.html file with your main web browser.
 
+# Screenshots
+
+- All screenshots are inside the assets folder within the screenshots folder
+-./assets/screenshots/...
+
 # Links
 
 - GitHub Repository Link
