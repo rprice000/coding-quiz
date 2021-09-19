@@ -36,8 +36,10 @@ var questionNumber = 0;
 var timeRemaining = 75;
 
 // Variables that will change the content of the page when user clicks Start Quiz
+var startQuizButton = document.getElementById("startButton");
 var quizPromptEl = document.getElementById("quizPrompt");
 var questionsHolder = document.getElementById("questionsHolder");
+
 
 function startingQuiz() {
 // Start the quiz on question 1 "0" with a start time of 75 seconds
@@ -62,21 +64,26 @@ function startingQuiz() {
                 quizOver();
             }
         }
+// Sets how fast the timer will decrement
     }, 1000);
     showQuestions();
 };
 
+// Function to move to next question after submitting answers
 function showQuestions() {
     nextQuestion();
 }
 
+// Variable for changing the content of the question as the user moves from one question to the next
 var questionPrompt = document.getElementById("questionPrompt");
 
+// Creates variable for each choice the user can make
 var choice1 = document.getElementById("choice0");
 var choice2 = document.getElementById("choice1");
 var choice3 = document.getElementById("choice2");
 var choice4 = document.getElementById("choice3");
 
+// Function for changint the content of the question and answer choices
 function nextQuestion() {
     questionPrompt.textContent = questionsList[questionNumber].question;
     choice1.textContent = questionsList[questionNumber].choices[0];
@@ -85,8 +92,9 @@ function nextQuestion() {
     choice4.textContent = questionsList[questionNumber].choices[3];
 }
 
+// Variable to show if user answered a question correct or incorrect
 var showIfCorrect = document.getElementById("showIfCorrect");
-
+// Function to display if user answered a question correct or incorrect
 function seeAnswer(answer) {
     showIfCorrect.style.display = "block";
 
@@ -94,10 +102,13 @@ function seeAnswer(answer) {
         correctChoices++;
         showIfCorrect.textContent = "Correct";
     } else {
+// Decrements timer by 10 seconds if answer is incorrect
         timeRemaining -= 10;
         timeCountDown.textContent = timeRemaining;
         showIfCorrect.textContent = "Incorrect! The answer is: " + questionsList[questionNumber].answer;
     }
+// Moves to next question in questionsList
+// Moves user to next question
     questionNumber++;
     if (questionNumber < questionsList.length) {
         nextQuestion();
@@ -106,6 +117,7 @@ function seeAnswer(answer) {
     }
 }
 
+// Created functions for each choice a user can make
 function selection1() {
     seeAnswer(0);
 }
@@ -119,8 +131,7 @@ function selection4() {
     seeAnswer(3);
 }
 
-var startQuizButton = document.getElementById("startButton");
-   
+// Event listeners for each choice a user can make
 startQuizButton.addEventListener("click", startingQuiz);
 choice1.addEventListener("click", selection1);
 choice2.addEventListener("click", selection2);
@@ -128,11 +139,12 @@ choice3.addEventListener("click", selection3);
 choice4.addEventListener("click", selection4);
 
 
-
+// Variables to displaying content when user is typing initials and saving scores
 var userFinalScoreData = document.getElementById("userFinalScoreData");
 var finalScore = document.getElementById("finalScore");
 var initialsData = document.getElementById("initialsData");
 
+// Function for displaying content when when user is typing initials and saving scores
 function quizOver() {
     userFinalScoreData.style.display = "block";
     questionsHolder.style.display = "none";
@@ -143,8 +155,10 @@ function quizOver() {
     finalScore.textContent = correctChoices;
 }
 
+// Variable for displaying high score list
 var highScores = document.getElementById("highScores");
 
+// Function for logging scores
 function logScores(event) {
     event.preventDefault();
 
@@ -163,8 +177,11 @@ function logScores(event) {
     var savedScoresArray;
 
     if (savedScoreData === null) {
+// Creates array to place user data into
         savedScoresArray = [];
     } else {
+
+// Creates user data objects to become a strings
         savedScoresArray = JSON.parse(savedScoreData)
     }
 
@@ -172,7 +189,7 @@ function logScores(event) {
         initials: initialsData.value,
         score: finalScore.textContent
     };
-
+// Sets user data as a string to be displayed when user clicks View High Scores button
     savedScoresArray.push(savedScore);
     var scoresString = JSON.stringify(savedScoresArray);
     window.localStorage.setItem("High Scores", scoresString);
@@ -186,7 +203,7 @@ submitScore.addEventListener("click", function(event) {
 });
 
 
-
+// Variables for showing quiz scores
 var scoresList = document.getElementById("scoresList");
 var i = 0;
 
