@@ -59,7 +59,7 @@ var correctChoices = 0;
 var questionNumber = 0;
 var timeRemaining = 75;
 
-function preparingQuiz() {
+function startingQuiz() {
     questionNumber = 0;
     totalTime = 75;
     timeCountDown.textContent = timeRemaining;
@@ -80,7 +80,6 @@ function preparingQuiz() {
             }
         }
     }, 1000);
-
     showQuestions();
 };
 
@@ -113,23 +112,18 @@ function seeAnswer(answer) {
     } else {
         quizOver();
     }
-
 }
 
-function selection1() 
-{
+function selection1() {
     seeAnswer(0);
 }
-function selection2() 
-{
+function selection2() {
     seeAnswer(1);
 }
-function selection3() 
-{
+function selection3() {
     seeAnswer(2);
 }
-function selection4() 
-{
+function selection4() {
     seeAnswer(3);
 }
 
@@ -172,18 +166,13 @@ function logScores(event) {
     };
 
     savedScoresArray.push(savedScore);
-
     var scoresString = JSON.stringify(savedScoresArray);
     window.localStorage.setItem("High Scores", scoresString);
-
     displayScores();
-   
 };
 
 var i = 0;
-
 function displayScores() {
-
     quizPromptEl.style.display = "none";
     timer.style.display = "none";
     questionsHolder.style.display = "none";
@@ -192,22 +181,19 @@ function displayScores() {
     highScores.style.display = "block";
 
     var savedScoreData = localStorage.getItem("High Scores");
-    
     if (savedScoreData === null) {
         return;
     }
 
     var storedUserData = JSON.parse(savedScoreData);
-
     for (; i < storedUserData.length; i++) {
         var newScores = document.createElement("p");
         newScores.innerHTML = storedUserData[i].initials + ": " + storedUserData[i].score;
         scoresList.appendChild(newScores);
     }
 }
-
-         
-startQuizButton.addEventListener("click", preparingQuiz);
+   
+startQuizButton.addEventListener("click", startingQuiz);
 choice1.addEventListener("click", selection1);
 choice2.addEventListener("click", selection2);
 choice3.addEventListener("click", selection3);
