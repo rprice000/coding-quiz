@@ -1,3 +1,4 @@
+/* Set styling for whole page */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
   color: white
 }
 
+/* Set styling for secondary Div */
 .secondary-div {
   display: flex;
   justify-content: space-around;
@@ -22,10 +24,12 @@
   display: none;
 }
 
+/* Set styling for Quiz Content */
 #QuizContentArea {
  text-align: center;
 }
 
+/* Set styling for all buttons */
 button {
   margin: 20px;
   padding: 10px;
@@ -39,16 +43,6 @@ button {
 
 button:hover {
   opacity: 1;
-}
-
-#questionPrompt {
-  font-weight: bold;
-  font-size: x-large;
-}
-
-#quizDirections {
-  padding-top: 10px;
-  font-weight: bold;
 }
 
 #viewHighScore {
@@ -67,6 +61,18 @@ button:hover {
   opacity: 1;
 }
 
+/* Set styling for question content */
+#questionPrompt {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#quizDirections {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+/* Set styling for initials input area */
 #initialsData {
   padding-left: 20px;
   padding-right: 20px;
