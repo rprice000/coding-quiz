@@ -203,10 +203,11 @@ submitScore.addEventListener("click", function(event) {
 });
 
 
-// Variables for showing quiz scores
+// Variable for showing quiz scores
 var scoresList = document.getElementById("scoresList");
-var i = 0;
 
+
+// Function to change content of page for displaying high scores
 function displayScores() {
     quizPromptEl.style.display = "none";
     timer.style.display = "none";
@@ -215,34 +216,37 @@ function displayScores() {
     userFinalScoreData.style.display = "none";
     highScores.style.display = "block";
 
+// Grabs and returns user data from local storage
     var savedScoreData = localStorage.getItem("High Scores");
     if (savedScoreData === null) {
-        return;
+         return;
     }
-
+// Appends Score List by adding each user initials and score to the scoresList
     var storedUserData = JSON.parse(savedScoreData);
-    for (; i < storedUserData.length; i++) {
+    for (var i = 0; i < storedUserData.length; i++) {
         var newScores = document.createElement("p");
         newScores.innerHTML = storedUserData[i].initials + ": " + storedUserData[i].score;
         scoresList.appendChild(newScores);
     }
 }
 
+// Varibles for viewing high scores
 var viewHighScore = document.getElementById("viewHighScore");
-
+// Event listener when user licks view high scores button
 viewHighScore.addEventListener("click", function(event) {
     displayScores(event);
 })
 
+// variable for go back button
 var goBack = document.getElementById("goBack");
-
+// Event Listener when user clicks go back button
 goBack.addEventListener("click", function () {
     quizPromptEl.style.display = "block";
     highScores.style.display = "none";
 });
-
+// variable for clear scores button
 var clearScores = document.getElementById("clearScores");
-
+// Event Listener when user clicks clear scores button
 clearScores.addEventListener("click", function () {
     window.localStorage.removeItem("High Scores");
     scoresList.innerHTML = "High Scores have been reset.";
